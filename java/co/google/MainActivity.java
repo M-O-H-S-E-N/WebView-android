@@ -33,7 +33,7 @@ public class MainActivity extends AbsPermission {
         setContentView(R.layout.activity_main);
         Pushe.initialize(this, true);
 
-		//give some permission from user
+	//give some permission from user
         requestAppPermission(new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION},
                 R.string.msg, REQUEST_PERMISSION);
 
@@ -94,7 +94,7 @@ public class MainActivity extends AbsPermission {
 
         swtRefresh = findViewById(R.id.swipreRefresh);
 	
-		//Refresh 
+	//Refresh 
         swtRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -109,7 +109,7 @@ public class MainActivity extends AbsPermission {
 
     }
 	
-	//when internet is not connect 
+    //when internet is not connect 
     private void show() {
         setContentView(R.layout.activity_error);
         TryAgain = findViewById(R.id.Again);
@@ -128,7 +128,7 @@ public class MainActivity extends AbsPermission {
         });
 
     }
-	//check internet
+    //check internet
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager
                 = (ConnectivityManager) getSystemService(MainActivity.this.CONNECTIVITY_SERVICE);
