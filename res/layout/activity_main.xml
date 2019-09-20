@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://..."
+    xmlns:app="http://..."
+    xmlns:tools="http://..."
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swipreRefresh"
+        >
+
+
+<WebView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/webview"
+    >
+
+</WebView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>
