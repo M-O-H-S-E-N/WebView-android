@@ -10,18 +10,15 @@
     <android.support.v4.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/swipreRefresh"
-        >
+        android:id="@+id/swipreRefresh">
 
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webview">
 
-<WebView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/webview"
-    >
-
-</WebView>
+    </WebView>
+    
     </android.support.v4.widget.SwipeRefreshLayout>
-
 
 </LinearLayout>
