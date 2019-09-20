@@ -1,8 +1,7 @@
-package co.abarbazar;
+package co.google;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import co.ronash.pushe.Pushe;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Handler;
@@ -34,7 +33,7 @@ public class MainActivity extends AbsPermission {
         setContentView(R.layout.activity_main);
         Pushe.initialize(this, true);
 
-
+		//give some permission from user
         requestAppPermission(new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION},
                 R.string.msg, REQUEST_PERMISSION);
 
@@ -61,7 +60,7 @@ public class MainActivity extends AbsPermission {
         mWebView.getSettings().setDomStorageEnabled(true);
         mWebView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
         if (catche == null) {
-            mWebView.loadUrl("https://www.abarbazar.com/");
+            mWebView.loadUrl("https://www.google.com/");
         } else {
             mWebView.loadUrl(catche);
         }
@@ -94,7 +93,8 @@ public class MainActivity extends AbsPermission {
 
 
         swtRefresh = findViewById(R.id.swipreRefresh);
-
+	
+		//Refresh 
         swtRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -108,7 +108,8 @@ public class MainActivity extends AbsPermission {
         });
 
     }
-
+	
+	//when internet is not connect 
     private void show() {
         setContentView(R.layout.activity_error);
         TryAgain = findViewById(R.id.Again);
@@ -127,7 +128,7 @@ public class MainActivity extends AbsPermission {
         });
 
     }
-
+	//check internet
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager
                 = (ConnectivityManager) getSystemService(MainActivity.this.CONNECTIVITY_SERVICE);
